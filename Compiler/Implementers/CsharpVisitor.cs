@@ -81,7 +81,7 @@ namespace Smc.Tests.Implementers
 
         public void Visit(HandleEventNode node)
         {
-            IndentedAppendLine("public void Handle(Event ev)");
+            IndentedAppendLine("private void Handle(Event ev)");
             IndentedAppendLine("{");
             indentLevel++;
             node.SwitchCaseNode.Accept(this);
